@@ -6,3 +6,7 @@
 	path = src/LISF
 	url = git@github.com:NESII/LISF.git
 	branch = feature/NUOPC
+[submodule "src/parflow"]
+	path = src/parflow
+	url = git@github.com:NESII/parflow.git
+	branch = feature/NUOPC
