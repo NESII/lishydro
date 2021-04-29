@@ -1,0 +1,44 @@
+if (! $?LISHYDRO_DIR) then
+  echo "Error: Please set LISHYDRO_DIR to root directory of cloned repository."
+  exit 1
+endif
+
+if (! -d $LISHYDRO_DIR) then
+   echo "Error:  $LISHYDRO_DIR directory does not exist."
+   exit 1
+endif
+
+source $LISHYDRO_DIR/modules/modules.discover.gnu.9.3
+
+# general
+setenv LISHYDRO_LIS_INST $LISHYDRO_DIR/LIS-INSTALL
+setenv LISHYDRO_WRFHYDRO_INST $LISHYDRO_DIR/WRFHydro-INSTALL
+
+# needed by LIS
+setenv LIS_SRC $LISHYDRO_DIR/LIS
+setenv LIS_ARCH linux_gfortran
+setenv LIS_SPMD parallel
+setenv LIS_FC mpif90
+setenv LIS_CC mpicc
+setenv LIS_JPEG /discover/nobackup/projects/lis/libs/jpeg/8d_sles12.3
+setenv LIS_OPENJPEG /discover/nobackup/projects/lis/libs/openjpeg/2.3.1_gnu-9.3
+setenv LIS_ECCODES /discover/nobackup/projects/lis/libs/ecCodes/2.18.0_gnu-9.3
+setenv LIS_NETCDF /discover/nobackup/projects/lis/libs/netcdf/4.7.4_gnu-9.3
+setenv LIS_HDF4 /discover/nobackup/projects/lis/libs/hdf4/4.2.15_gnu-9.3
+#setenv LIS_HDFEOS
+setenv LIS_HDF5 /discover/nobackup/projects/lis/libs/hdf5/1.12.0_gnu-9.3
+setenv LIS_MODESMF /discover/nobackup/projects/lis/libs/esmf/8.0.1_gnu-9.3_gmao-openmpi-4.0.4/mod/modO/Linux.gfortran.64.openmpi.default
+setenv LIS_LIBESMF /discover/nobackup/projects/lis/libs/esmf/8.0.1_gnu-9.3_gmao-openmpi-4.0.4/lib/libO/Linux.gfortran.64.openmpi.default
+#setenv LIS_MINPACK
+#setenv LIS_CRTM
+#setenv LIS_CRTM_PROF
+#setenv LIS_CMEM
+
+# needed by WRF-Hydro
+setenv NETCDF $LIS_NETCDF
+
+# needed by LIS and WRF-Hydro
+setenv ESMFMKFILE $LIS_LIBESMF/esmf.mk
+setenv WRF_HYDRO 1
+
+exit 0

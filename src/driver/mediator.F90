@@ -278,8 +278,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -287,8 +287,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -479,8 +479,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -488,8 +488,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -660,8 +660,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -669,8 +669,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -802,8 +802,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -811,8 +811,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -1093,8 +1093,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -1102,8 +1102,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -2049,8 +2049,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, &
@@ -2058,8 +2058,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -2344,8 +2344,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -2353,8 +2353,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -2425,8 +2425,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -2434,8 +2434,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -2502,8 +2502,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -2511,8 +2511,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -2654,8 +2654,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -2663,8 +2663,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -2703,12 +2703,17 @@ module Mediator
     !---------------------------
 
     do i=1, is%wrap%instCntLnd
-      call NUOPC_UpdateTimestamp(is%wrap%LND(i)%extToState, mediatorClock, rc=rc)
+#if ESMF_VERSION_MAJOR >= 8
+      call NUOPC_SetTimestamp(is%wrap%LND(i)%extToState, &
+        mediatorClock, rc=rc)
       if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
         line=__LINE__, file=__FILE__)) return  ! bail out
-!      call NUOPC_SetTimestamp(is%wrap%LND%extToState, mediatorClock, rc=rc)
-!      if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
-!        line=__LINE__, file=__FILE__)) return  ! bail out
+#else
+      call NUOPC_UpdateTimestamp(is%wrap%LND(i)%extToState, &
+        mediatorClock, rc=rc)
+      if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
+        line=__LINE__, file=__FILE__)) return  ! bail out
+#endif
     enddo
 
   end subroutine
@@ -2745,8 +2750,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -2754,8 +2759,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -2897,8 +2902,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -2906,8 +2911,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 
@@ -2946,12 +2951,17 @@ module Mediator
     !---------------------------
 
     do i=1, is%wrap%instCntHyd
-      call NUOPC_UpdateTimestamp(is%wrap%HYD(i)%extToState, mediatorClock, rc=rc)
+#if ESMF_VERSION_MAJOR >= 8
+      call NUOPC_SetTimestamp(is%wrap%HYD(i)%extToState, &
+        mediatorClock, rc=rc)
       if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
         line=__LINE__, file=__FILE__)) return  ! bail out
-!      call NUOPC_SetTimestamp(is%wrap%HYD%extToState, mediatorClock, rc=rc)
-!      if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
-!        line=__LINE__, file=__FILE__)) return  ! bail out
+#else
+      call NUOPC_UpdateTimestamp(is%wrap%HYD(i)%extToState, &
+        mediatorClock, rc=rc)
+      if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
+        line=__LINE__, file=__FILE__)) return  ! bail out
+#endif
     enddo
 
   end subroutine
@@ -2988,8 +2998,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     call ESMF_AttributeGet(mediator, name="Verbosity", value=value, defaultValue="0", &
@@ -2997,8 +3007,8 @@ module Mediator
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","debug"/), &
-      specialValueList=(/0,65535,65536/), rc=rc)
+      specialStringList=(/"max ","high","low ","off "/), &
+      specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
     if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
       line=__LINE__, file=__FILE__)) return  ! bail out
 

@@ -726,8 +726,8 @@ module ESM
       if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
         line=__LINE__, file=__FILE__)) return  ! bail out
       diagnostic = ESMF_UtilString2Int(value, &
-        specialStringList=(/"min","max","debug"/), &
-        specialValueList=(/0,65535,65536/), rc=rc)
+        specialStringList=(/"max ","high","low ","off "/), &
+        specialValueList= (/ 65535, 65535, 65535,     0/), rc=rc)
       if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
         line=__LINE__, file=__FILE__)) return  ! bail out
       call ESMF_AttributeGet(connectorList(i), name="Verbosity", value=value, &
@@ -735,8 +735,8 @@ module ESM
       if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
         line=__LINE__, file=__FILE__)) return  ! bail out
       verbosity = ESMF_UtilString2Int(value, &
-        specialStringList=(/"min","max","debug"/), &
-        specialValueList=(/0,65535,65536/), rc=rc)
+        specialStringList=(/"max ","high","low ","off "/), &
+        specialValueList= (/ 65535, 65281,  8193,     0/), rc=rc)
       if (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
         line=__LINE__, file=__FILE__)) return  ! bail out
       if (verbosity>0) then
