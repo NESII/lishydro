@@ -125,6 +125,24 @@ if (! -f $LISHYDRO_EXE) then
    exit 1
 endif
 
+# Check executable strings for compiler version
+if ($COMP_VERS =~ *intel19*) then
+  set COMP_VERS_STR="Intel.*Version 19"
+else if ($COMP_VERS =~ *intel17*) then
+  set COMP_VERS_STR="Intel.*Version 17"
+else if ($COMP_VERS =~ *intel14*) then
+  set COMP_VERS_STR="Intel.*Version 14"
+else if ($COMP_VERS =~ *gnu.9*) then
+  set COMP_VERS_STR="GCC: (GNU) 9"
+else
+  set COMP_VERS_STR="compiler_unknown"
+endif
+set COMP_CNT=`strings -a $LISHYDRO_EXE | grep "$COMP_VERS_STR" | wc -l`
+if ($COMP_CNT < 1) then
+  echo "WARNING: Executable compiler version check failed [$COMP_VERS]"
+  echo "         Please edit modulefiles in run.csh as needed"
+endif
+
 # Set RUNDIR and create RUNDIR
 set RUNDIR=$LISHYDRO_DIR/run/$COMPSET
 if (-d $RUNDIR) then
