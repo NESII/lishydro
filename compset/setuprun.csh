@@ -92,10 +92,7 @@ if (! -f $LISHYDRO_RUNCONFIG) then
 endif
 
 # Set LISHYDRO_RUNSCRIPT template file
-set LISHYDRO_RUNSCRIPT="./$DIR_RUNSCP/run.csh.$HOSTNAME"
-if ($COMP_VERS == "intel19") then
-    set LISHYDRO_RUNSCRIPT="./$DIR_RUNSCP/run.csh.$HOSTNAME.19"
-endif
+set LISHYDRO_RUNSCRIPT="./$DIR_RUNSCP/run.csh.$HOSTNAME.$COMP_VERS"
 if (! -f $LISHYDRO_RUNSCRIPT) then
     echo "ERROR: LISHYDRO_RUNSCRIPT file is missing [$LISHYDRO_RUNSCRIPT]"
     exit 1
